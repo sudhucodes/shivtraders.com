@@ -130,7 +130,7 @@ section h2 {
 }
 
 .product:hover {
-    transform: translateY(-5px);
+    transform: translateY(-0px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Slight shadow on hover */
 }
 
@@ -151,6 +151,23 @@ section h2 {
     margin-bottom: 0; /* Remove bottom margin from the last paragraph */
 }
 
+
+.view-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 14px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.view-button:hover {
+    background-color: #0056b3;
+}
+
 /* Review Section */
 #reviews {
     background-color: #f8f9fa; /* Light gray background */
@@ -166,12 +183,13 @@ section h2 {
 
 .review {
     background-color: #fff;
-    padding: 40px;
+    padding: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    width: calc(45% - 40px);
+    width: calc(45% - 20px); /* Adjusted width */
     margin-bottom: 40px;
     transition: transform 0.3s ease;
+    box-sizing: border-box; /* Added to include padding in width calculation */
 }
 
 .review:hover {
@@ -180,21 +198,26 @@ section h2 {
 }
 
 .review h3 {
-    font-size: 22px;
-    color: darkcyan;
-    margin-bottom: 15px;
+    font-size: 20px; /* Adjusted font size */
+    color: darkcyan; /* Changed text color */
+    margin-bottom: 10px; /* Reduced margin */
 }
 
-.review p {
+.review-rating {
+    color: goldenrod; /* Added color for star rating */
+}
+
+.review-text {
     font-size: 16px;
-    color: #666;
+    color: #555; /* Changed text color */
     line-height: 1.6;
     margin-bottom: 20px;
 }
 
-.review p:last-child {
+.review-text:last-child {
     margin-bottom: 0;
 }
+
 
 /* Media Query for Responsive Design */
 @media screen and (max-width: 768px) {
@@ -259,3 +282,4 @@ footer p {
     margin: 0;
     font-size: 18px;
 }
+
